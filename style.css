@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  color: #333;
+}
+
+/* ==== LOGIN PAGE ==== */
+.login-body {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 35px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: slideUp 0.6s ease;
+}
+
+.login-card h1 {
+  font-size: 2rem;
+  color: #2575fc;
+}
+
+.subtitle {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.login-card input:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 6px rgba(37,117,252,0.3);
+}
+
+.login-card button {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  width: 100%;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.login-card button:hover {
+  transform: scale(1.03);
+}
+
+.note {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 15px;
+}
+
+/* ==== TASK PAGE ==== */
+.tasks-body {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.task-container {
+  background: #fff;
+  border-radius: 20px;
+  width: 480px;
+  max-width: 95%;
+  padding: 25px 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.logout-btn {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.task-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-input input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+.task-input input:focus {
+  border-color: #0072ff;
+  box-shadow: 0 0 6px rgba(0,114,255,0.3);
+}
+
+.add-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  width: 45px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-btn:hover {
+  transform: scale(1.05);
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.task-list li {
+  background: #f5f7fa;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.task-list li:hover {
+  transform: scale(1.02);
+}
+
+.action-btns button {
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.edit {
+  background: #28a745;
+}
+
+.delete {
+  background: #dc3545;
+}
+
+/* ==== ANIMATIONS ==== */
+.fade-in {
+  animation: fadeIn 0.7s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
